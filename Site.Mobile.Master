@@ -1,0 +1,27 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="F2.Site_Mobile" %>
+<%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Funmobile Nigeria, VAS, VAS in Nigeria, VAS in Africa, VAS in Africa, funmobile, fun mobile nigeria, SMS, IVR, VOIP, BULK SMS,Value added services, Telecoms VAS, mobile services, messaging, crbt, caller tunes, ringback tune, ringtone, VAS in Cameroon, VAS in Cameroun, Content provider, Telecoms CP, funmobile.com, funmobilelive.com, music, african music,Nigeria, Victoria Island, Lagos, FNL, Treasure Caller Tune, MTN VAS, AirTel VAS, WASPAN, Lagos State, Eti Osa, nigerian, Leading VAS in Nigeria, Leading VAS in Lagos, Leading VAS in Cameroon, Leading VAS in Africa, Leading Mobile Content Provider in Nigeria. Lagos, Nigeria," />
+    <meta name="description" content="Funmobile is a pioneer in the mobile content market in West Africa. Funmobile commenced operations in 2008 and is headquartered in Lagos, Nigeria.
+ We combine entertainment and information with richer multimedia forms of video, music and gaming to GSM Subs. We are the Nigeria's leading VAS content and services provider offering a range of value-added services to all the leading mobile operators." />
+    <title></title>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <h1>Mobile Master Page</h1>
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+        <friendlyUrls:ViewSwitcher runat="server" />
+    </div>
+    </form>
+</body>
+</html>

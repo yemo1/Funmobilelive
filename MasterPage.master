@@ -1,0 +1,316 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+ protected void search_Click(object sender, EventArgs e)
+    {
+        string url = string.Empty;
+        string value = TextBox1.Text;
+        value.Replace(" ", "+");
+        url = "search.aspx?q=" + value;
+	 Response.Redirect(url);
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>Funmobile</title>
+	
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta  charset="utf-8"/>
+   <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Funmobile Nigeria, VAS, VAS in Nigeria, VAS in Africa, VAS in Africa, funmobile, fun mobile nigeria, SMS, IVR, VOIP, BULK SMS,Value added services, Telecoms VAS, mobile services, messaging, crbt, caller tunes, ringback tune, ringtone, VAS in Cameroon, VAS in Cameroun, Content provider, Telecoms CP, funmobile.com, funmobilelive.com, music, african music,Nigeria, Victoria Island, Lagos, FNL, Treasure Caller Tune, MTN VAS, AirTel VAS, WASPAN, Lagos State, Eti Osa, nigerian, Leading VAS in Nigeria, Leading VAS in Lagos, Leading VAS in Cameroon, Leading VAS in Africa, Leading Mobile Content Provider in Nigeria. Lagos, Nigeria," />
+    <meta name="description" content="Funmobile is a pioneer in the mobile content market in West Africa. Funmobile commenced operations in 2008 and is headquartered in Lagos, Nigeria.
+ We combine entertainment and information with richer multimedia forms of video, music and gaming to GSM Subs. We are the Nigeria's leading VAS content and services provider offering a range of value-added services to all the leading mobile operators." />
+	<meta name="author" content="Funmobile Limited"/>
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+	<!-- CSS
+  ================================================== -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700|Alegreya:700italic,400,400italic' rel='stylesheet' type='text/css'/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/foundation.css"/>
+	<link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css"/>
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="css/mediaqueries.css"/>
+	<link rel="stylesheet" href="css/flexslider.css"/>
+	<link rel="stylesheet" href="colors/default.css"/>
+    <%--<link href="Content/bootstrap.min.css" rel="stylesheet" />--%>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favon.ico">
+	<link rel="apple-touch-icon" href="images/favon.ico">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favon.ico">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favon.ico">
+
+	<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+	<script src="js/modernizr.js"></script>
+
+	<script src="js/jquery-1.8.2.min.js"></script>
+		<!-- Hammer reload -->
+		  <script>
+			  setInterval(function () {
+				  try {
+					  if (typeof ws != 'undefined' && ws.readyState == 1) { return true; }
+					  ws = new WebSocket('ws://' + (location.host || 'localhost').split(':')[0] + ':35353')
+					  ws.onopen = function () { ws.onclose = function () { document.location.reload() } }
+					  ws.onmessage = function () {
+						  var links = document.getElementsByTagName('link');
+						  for (var i = 0; i < links.length; i++) {
+							  var link = links[i];
+							  if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+								  href = link.href.replace(/((&|\?)hammer=)[^&]+/, '');
+								  link.href = href + (href.indexOf('?') >= 0 ? '&' : '?') + 'hammer=' + (new Date().valueOf());
+							  }
+						  }
+					  }
+				  } catch (e) { }
+			  }, 1000)
+		  </script>
+		<!-- /Hammer reload -->
+	<asp:ContentPlaceHolder id="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server">
+		<div>
+			<div id="mobile-bar">
+				<a class="menu-trigger" href="#"></a>
+				<h1 class="mob-title">Fun Mobile</h1>
+			</div>
+
+			<div id="page">
+				<div class="row">
+					<header id="header" class="twelve columns">
+						<div id="tophead">
+							<div class="row">
+								<div class="six columns">
+									<!--<a href="">Lorem Ipsum</a>-->
+								</div>
+
+								<div class="six columns text-right">
+									<!--Lorem ipsum dolor sit.--><strong>Hot Line: +234-1-271-1730</strong>
+								</div>
+							</div>
+						</div>
+
+						<div id="mainhead" class="shd">
+							<div class="row">
+								<div id="logo" class="four columns">
+								<a href = "Default.aspx"><img src="../images/funmobile-logo-website1.png"></a> </div>
+								<nav id="nav">
+									<ul id="navigation" class="sf-menu group">
+										<li <%--class="current-menu-item"--%>>
+											<a href="../Default">Home</a>
+											<!--<ul>
+												<li><a href="#">Normal</a></li>
+												<li><a href="#">Alternative</a></li>
+											</ul>-->
+										</li>
+											<li>
+											<a href="#">About</a>
+											<ul>
+												<li><a href="../Philosophy">Philosophy</a></li>
+												<li><a href="../Management">Management</a></li>
+												<li><a href="../Partners">Partners</a></li>
+												<!--<li><a href="#">Subscription</a></li>-->
+											</ul>
+											</li>
+										<li>
+											<a href="#">Messaging</a>
+											<ul>
+												<li><a href="../Funchat">FunChat</a></li>
+												<li><a href="../Quiz">Trivia</a></li>
+												<li><a href="../Dating">Mobile Dating</a></li>
+												<li><a href="../Subscription">Subscription</a></li>
+                                                <li><a href="#">SMS Solutions</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">IVR</a>
+											<ul>
+												<li><a href="../Voice">Voice Chat</a></li>
+												<li><a href="../Islamic">Devotional Services</a></li>
+                                                <li><a href="../Tutor">Voice Tutor</a></li>
+													<!--<ul>
+														<li><a href="#">Third Level Menu Item</a></li>
+														<li><a href="#">Menu Item</a>
+													</ul>
+												</li>-->
+											</ul>
+										</li>
+										<li>
+											<a href="#">InfoSearch</a>
+												<ul>
+												<li><a href="../InfoSearch">Call Centre</a></li>
+												<li><a href="../Flight">Flight Booking</a></li>
+												<li><a href="../Traffic">Traffic Info</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Music</a>
+												<ul>
+												<li><a href="../Tunez">Caller-Ringback Tones</a></li>
+												<li><a href="../Ringtones">Ringtones</a></li>
+                                                <li><a href="#">FullTracks</a></li>
+                                                <li><a href="#">Mobile Radio</a></li>
+												<!--<li><a href="#">Traffic Info</a></li>
+												<li><a href="#">Subscription</a></li>-->
+											</ul>
+										</li>
+										<li>
+											<a href="#">Multimedia</a>
+												<ul>
+												<li><a href="../WallPaper">WallPapers</a></li>
+												<li><a href="../SMSVideo">Videos</a></li>
+												<li><a href="../Movies">Short Movies</a></li>
+                                                <li><a href="Apps">Apps</a></li>
+												<!--<li><a href="#">Traffic Info</a></li>
+												<li><a href="#">Subscription</a></li>-->
+											</ul>
+										</li>
+                                        <li>
+											<a href="../Terms">Terms</a>
+												<%--<ul>
+                                               <li><a href="../NCC.aspx">NCC Consumer Code</a></li>
+												 <li><a href="../WorldCup.aspx">World Cup</a></li>
+                                               <li><a href="../Terms.aspx">Fun Quiz</a></li>
+                                               <li><a href="../valentine.aspx">Valentine Game</a></li>
+                                               <li><a href="../worldcup.aspx">Word Cup Qiuz</a></li>
+                                               <li><a href="../Independence.aspx">Independence Game</a></li>
+                                               <li><a href="../Christmas.aspx">Christmas Trivia</a></li>
+                                               <li><a href="../Easter.aspx">Easter Quiz</a></li>
+                                               <li><a href="../Funfacts.aspx">Funfacts Trivia</a></li>
+                                               <li><a href="../Music.aspx">Music Trivia</a></li>
+                                               <li><a href="../MyClub.aspx">MyClub Quiz</a></li>
+											</ul>--%>
+										</li>
+										<li>
+											<a href="../Contact.aspx">Contact</a>
+												<!--<ul>
+												<li><a href="#">Chat Mobile Apps</a></li>
+												<li><a href="#">SMS Video</a></li>
+												<li><a href="#">Traffic Info</a></li>
+												<li><a href="#">Subscription</a></li>
+											</ul>-->
+										</li>
+									</ul><!-- #navigation -->
+								</nav><!-- #nav -->
+							</div>
+						</div>
+					</header>
+				</div>
+				<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+				</asp:ContentPlaceHolder>
+			</div>
+		</div>
+	<footer id="footer">
+	<div class="row">
+		<div class="four columns">
+			<aside class="widget group">
+				<h3 class="widget-title">Contact</h3>
+				<p><strong>By Mail:</strong>
+					No. 2A, A.J Marinho Drive,
+					Off Sinari Daranijo Street, Victoria Island.
+					Lagos, Nigeria</p>
+					<p><strong>By E-mail:</strong>
+					ask@funmobilelive.com</p>
+					<p><strong>By Telephone:</strong>
+					+234-1-271-1730
+				</p>
+			</aside><!-- /widget -->
+		</div>
+		<div class="four columns">
+			<aside class="widget widget_ci_flickr_widget group">
+				<h3 class="widget-title">Partners</h3>
+				<div class="f group">
+					<div class="flickr_badge_image">
+						<a href="#"><img src="../images/dummy/Partners/MTN.jpg"></a>
+					</div>
+					<div class="flickr_badge_image"><img src="../images/dummy/Partners/Etisalat.jpg"></div>
+					
+					<div class="flickr_badge_image"><img src="../images/dummy/Partners/Airtel.jpg"></div>
+					<!--<div class="flickr_badge_image"></div>
+					<div class="flickr_badge_image"></div>-->
+				</div>
+			</aside>
+		</div>
+		<div class="four columns">
+			<aside class="widget widget_search group">
+				<h3 class="widget-title">Search</h3>
+					<div class ="searchform">
+						<asp:TextBox ID="TextBox1" runat="server" class="s" placeholder="Search"></asp:TextBox>
+						<asp:Button ID="search" runat="server" Text="GO" class="searchsubmit action-btn" OnClick="search_Click"/>
+					</div>
+			</aside>
+		        </form>
+			<aside class="widget group">
+				<h3 class="widget-title">Trending Tweets</h3>
+				<a class="twitter-timeline" href="https://twitter.com/funmobilelive" data-widget-id="405456740965023744">Tweets by @funmobilelive</a>
+                <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+			</aside><!-- /widget -->
+		</div>
+		<div class="twelve columns">
+			<div class="copy">
+				
+				<ul>
+                    <li>
+						<a href="http://www.facebook.com/funmobile.nigeria"  target="_blank">
+							<img src="Images/facebook_32.png" alt="Facebook" />
+						</a>
+					</li>					<li>
+						<a href="http://www.linkedin.com/company/791136?trk=tyah"  target="_blank">
+							<img src="Images/linkedin_32.png" alt="Linkedin"  />
+						</a>
+					</li>					<li>
+						<a href="https://secure.skype.com/portal/overview"  target="_blank">
+							<img src="Images/skype_32.png" alt="Skype"  />
+						</a>
+					</li>					<li>
+						<a href="https://twitter.com/funmobilelive"  target="_blank">
+							<img src="Images/twitter_32.png" alt="Twitter"  />
+						</a>
+					</li>					<li>
+						<a href="https://www.youtube.com/user/FunMobilelive"  target="_blank">
+							<img src="Images/youtube_32.png" alt="Youtube"  />
+						</a>
+					</li>
+                    <li>
+                        <a href="Terms.aspx">Terms & Conditions</a>
+                    </li>
+				</ul>
+			    <p>funmobile, all rights reserved 2014</p>
+			</div>
+				
+			</div>
+		</div>
+	</div>
+</footer>
+
+	<!-- Javascript
+================================================== -->
+
+<script src="js/superfish.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/fancybox/source/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fitvids.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.equalHeights.js"></script>
+<script src="js/jRespond.min.js"></script>
+<script src="js/jquery.jpanelmenu.min.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/scripts.js"></script>
+<script src="Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+</body>
+</html>

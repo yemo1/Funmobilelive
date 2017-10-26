@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Fun Mobile</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700|Alegreya:700italic,400,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/mediaqueries.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="colors/default.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" href="">
+	<link rel="apple-touch-icon" sizes="72x72" href="">
+	<link rel="apple-touch-icon" sizes="114x114" href="">
+
+	<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+	<script src="js/modernizr.js"></script>
+
+	
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+</head>
+<body>
+
+<div id="mobile-bar">
+	<a class="menu-trigger" href="#"></a>
+	<h1 class="mob-title">Title</h1>
+</div>
+
+<div id="page">
+
+	<div class="row">
+		<header id="header" class="twelve columns">
+			<div id="tophead">
+				<div class="row">
+					<div class="six columns">
+						<!--<a href="">Lorem Ipsum</a>-->
+					</div>
+
+					<div class="six columns text-right">
+						<!--Lorem ipsum dolor sit.--><strong>Hot Line:</strong> +234-1-271-1730
+					</div>
+				</div>
+			</div>
+
+			<div id="mainhead" class="shd">
+				<div class="row">
+					<div id="logo" class="four columns">
+				    <img src="images/funmobile-logo-website1.png"> </div>
+					<nav id="nav">
+	<ul id="navigation" class="sf-menu group">
+		<li class="current-menu-item">
+			<a href="#">Home</a>
+			<!--<ul>
+				<li><a href="#">Normal</a></li>
+				<li><a href="#">Alternative</a></li>
+			</ul>-->
+		</li>
+        	<li>
+			<a href="#">About</a>
+            <ul>
+				<li><a href="#">Philosophy</a></li>
+				<li><a href="#">Management</a></li>
+				<li><a href="#">Partners</a></li>
+				<!--<li><a href="#">Subscription</a></li>-->
+			</ul>
+			</li>
+		<li>
+			<a href="#">Messaging</a>
+			<ul>
+				<li><a href="#">Chat Services</a></li>
+				<li><a href="#">Quiz Services</a></li>
+				<li><a href="#">Dating</a></li>
+				<li><a href="#">Subscription</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">VOIP</a>
+			<ul>
+				<li><a href="#">Voice Chat</a></li>
+				<li><a href="#">Islamic Voice Content</a></li>
+					<!--<ul>
+						<li><a href="#">Third Level Menu Item</a></li>
+						<li><a href="#">Menu Item</a>
+					</ul>
+				</li>-->
+			</ul>
+		</li>
+		<li>
+			<a href="#">IVR</a>
+            	<ul>
+				<li><a href="#">Info Search</a></li>
+				<li><a href="#">Flight Booking</a></li>
+				<li><a href="#">Traffic Info</a></li>
+				<li><a href="#">Subscription</a></li>
+			</ul>
+		</li>
+        <li>
+			<a href="#">Music</a>
+            	<ul>
+				<li><a href="#">Caller Tunes</a></li>
+				<li><a href="#">Ringtones Download</a></li>
+				<!--<li><a href="#">Traffic Info</a></li>
+				<li><a href="#">Subscription</a></li>-->
+			</ul>
+		</li>
+        <li>
+			<a href="#">Multimedia & Apps</a>
+            	<ul>
+				<li><a href="#">Chat Mobile Apps</a></li>
+				<li><a href="#">SMS Video</a></li>
+				<!--<li><a href="#">Traffic Info</a></li>
+				<li><a href="#">Subscription</a></li>-->
+			</ul>
+		</li>
+        <li>
+			<a href="#">Contact</a>
+            	<!--<ul>
+				<li><a href="#">Chat Mobile Apps</a></li>
+				<li><a href="#">SMS Video</a></li>
+				<li><a href="#">Traffic Info</a></li>
+				<li><a href="#">Subscription</a></li>
+			</ul>-->
+		</li>
+	</ul><!-- #navigation -->
+</nav><!-- #nav -->
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<div id="home-hero">
+		<div id="homeslider" class="flexslider">
+			<ul class="slides">
+				<li>
+					<div class="slide" style="background: url('images/dummy/slide1.jpg') center center">
+						<h3 class="slide-title"></h3>
+						<!--<p class="btn-container">
+							<a class="slide-btn" href="">Know More</a>
+						</p>-->
+					</div>
+				</li>
+				<li>
+					<div class="slide" style="background: url('images/dummy/slide2.jpg') center center">
+						<!--<h3 class="slide-title">Dinner's Ready</h3>
+						<p class="btn-container">
+							<a class="slide-btn" href="">View Today's Menu</a>
+						</p>-->
+					</div>
+				</li>
+				<li>
+					<div class="slide" style="background: url('images/dummy/slide3.jpg') center center">
+						<!--<h3 class="slide-title">Dinner's Ready</h3>
+						<p class="btn-container">
+							<a class="slide-btn" href="">View Today's Menu</a>
+						</p>-->
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="main" class="row" role="main">
+		<div class="twelve columns">
+
+			<div class="widget widget_ci_testimonial shd">
+
+	<div class="testimonial-sld flexslider">
+		<ul class="slides">
+			<li>
+				<blockquote>
+					<p>“It takes more than just “mobile content” to satisfy the customer.  We believe that the quality of our offerings and reliable service are also crucial to our success.”</p>
+					<!--<cite>Above and Beyond Magazine, Gerasimos Tsiamalos</cite>-->
+				</blockquote>
+			</li>
+			<li>
+				<blockquote>
+					<p>“Great is not good enough.
+Customer is key. Their satisfaction is our responsibility.”</p>
+					<!--<cite>Above and Beyond Magazine, Gerasimos Tsiamalos</cite>-->
+				</blockquote>
+			</li>
+			<li>
+				<blockquote>
+					<p>“Focus on quality and reliability.
+There is pride in transparency.”</p>
+					<!--<cite>Above and Beyond Magazine, Gerasimos Tsiamalos</cite>-->
+				</blockquote>
+			</li>
+		</ul>
+	</div>
+</div>
+
+			<div class="row">
+				<div class="four columns">
+					<div class="block shd">
+						<figure class="block-thumb">
+							<a href="">
+								<img src="images/dummy/thumb1.jpg" alt="">
+								<div class="overlay"></div>
+							</a>
+						</figure>
+						<div class="block-title">
+							<h3><a href="">Stay Informed</a></h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="four columns">
+					<div class="block shd">
+						<figure class="block-thumb">
+							<a href="">
+								<img src="images/dummy/thumb2.jpg" alt="">
+								<div class="overlay"></div>
+							</a>
+						</figure>
+						<div class="block-title">
+							<h3><a href="">Fun Education</a></h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="four columns">
+					<div class="block shd">
+						<figure class="block-thumb">
+							<a href="">
+								<img src="images/dummy/thumb3.jpg" alt="">
+								<div class="overlay"></div>
+							</a>
+						</figure>
+						<div class="block-title">
+							<h3><a href="">Mobility</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div> <!-- #main -->
+	</div>
+
+
+<footer id="footer">
+	<div class="row">
+		<div class="four columns">
+			<aside class="widget group">
+	<h3 class="widget-title">Contact</h3>
+	<p><strong>By Mail:</strong>
+No. 2A, A.J Marinho Drive,
+Off Sinari Daranijo Street, Victoria Island.
+Lagos, Nigeria</p>
+<p><strong>By E-mail:</strong>
+ask@funmobilelive.com</p>
+<p><strong>By Telephone:</strong>
++234-1-271-1730</p>
+</aside><!-- /widget -->
+		</div>
+		<div class="four columns">
+			<aside class="widget widget_ci_flickr_widget group">
+	<h3 class="widget-title">Partners</h3>
+	<div class="f group">
+		<div class="flickr_badge_image">
+			<a href="#"><img src="images/dummy/Partners/MTN.jpg"></a>
+		</div>
+		<div class="flickr_badge_image"><img src="images/dummy/Partners/Etisalat.jpg"></div>
+		<div class="flickr_badge_image"><img src="images/dummy/Partners/Glo.jpg"></div>
+		<div class="flickr_badge_image"><img src="images/dummy/Partners/Airtel.jpg"></div>
+		<!--<div class="flickr_badge_image"></div>
+		<div class="flickr_badge_image"></div>-->
+	</div>
+</aside>
+		</div>
+		<div class="four columns">
+			<aside class="widget widget_search group">
+	<h3 class="widget-title">Search</h3>
+
+<form action="/" method="get" role="search" class="searchform">
+	<div>
+		<input type="text" class="s" name="s" value="" placeholder="Search">
+		<input type="submit" value="GO" class="searchsubmit action-btn">
+	</div>
+</form>
+</aside>
+			<aside class="widget group">
+	<h3 class="widget-title">Trending Tweets</h3>
+	<p>#FunMobile moves to a new office, all to serve you better</p>
+    <p>#FunMobile launches mobile flight booking application, works on all IOS and Android devices</p>
+</aside><!-- /widget -->
+		</div>
+
+		<div class="twelve columns">
+			<div class="copy">
+				<p>funmobile, all rights reserved 2014</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</div> <!-- #page -->
+
+<!-- Javascript
+================================================== -->
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/fancybox/source/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fitvids.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.equalHeights.js"></script>
+<script src="js/jRespond.min.js"></script>
+<script src="js/jquery.jpanelmenu.min.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
